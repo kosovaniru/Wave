@@ -1,0 +1,95 @@
+@import "vars";
+@import "reset";
+@import "fonts";
+@import "global";
+
+.header {
+  @extend %img-styles;
+  background-color: transparent;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      180deg,
+      #01353e 0%,
+      rgba(51, 51, 51, 0.6) 31.64%,
+      rgba(51, 51, 51, 0.22) 74.35%,
+      rgba(51, 51, 51, 0) 99.87%
+    );
+    inset: 0;
+    z-index: -1;
+  }
+  &__inner {
+    padding-top: 35px;
+  }
+  .container {
+    display: flex;
+    gap: 185px;
+    align-items: center;
+  }
+  &__list {
+    display: flex;
+    gap: 45px;
+    @extend %roboto-400;
+    letter-spacing: 0.03em;
+    font-size: 24px;
+    color: $white-color;
+  }
+  &__item {
+    padding-bottom: 5px;
+    &--active {
+      border-bottom: 1px solid $accent-color;
+    }
+  }
+  &__hero {
+    height: calc(100vh - 341px);
+    margin: 0 auto;
+    @extend %flex-center;
+  }
+  &__title {
+    width: 654px;
+    text-align: center;
+    @extend %roboto-400;
+    font-size: 24px;
+    letter-spacing: 0.03em;
+    color: $black-color;
+  }
+  &__name {
+    @extend %ralway-700;
+    font-size: 200px;
+    display: block;
+  }
+  &__serf {
+    width: 20px;
+    height: 69px;
+    position: absolute;
+    bottom: 92px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__serf-img {
+    @extend %img-styles;
+  }
+}
+
+.logo {
+  &__img {
+    @extend %img-styles;
+    width: 60px;
+    height: 63px;
+    object-fit: contain;
+  }
+}
+
+.footer {
+  background-color: $accent-color;
+  .logo {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 68px 0;
+  }
+}
