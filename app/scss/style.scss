@@ -29,6 +29,7 @@
     display: flex;
     gap: 185px;
     align-items: center;
+    padding: 0;
   }
   &__list {
     display: flex;
@@ -81,6 +82,28 @@
     width: 60px;
     height: 63px;
     object-fit: contain;
+  }
+}
+
+.about {
+  .container {
+    padding-top: 189px;
+  }
+  .section-title {
+    margin-bottom: 100px;
+  }
+  &__box {
+    @extend %roboto-300;
+    text-align: left;
+    display: grid;
+    justify-content: space-between;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    column-gap: 100px;
+    margin-bottom: 200px;
+    line-height: 1.29;
+    letter-spacing: 0.04em;
   }
 }
 

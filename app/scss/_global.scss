@@ -10,3 +10,24 @@
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.section-title {
+  @extend %ralway-600;
+  font-size: 48px;
+  letter-spacing: 0.01em;
+  color: $title-color;
+  padding-right: 48px;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  &::after {
+    content: "";
+    background-image: url(../images/sections/section-title__line.png);
+    position: absolute;
+    @extend %img-styles;
+    right: 0;
+    bottom: -40px;
+    width: 48px;
+    height: 85px;
+  }
+}
