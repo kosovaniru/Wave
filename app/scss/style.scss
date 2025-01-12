@@ -86,10 +86,8 @@
 }
 
 .about {
-  .container {
-    padding-top: 189px;
-  }
   .section-title {
+    padding-top: 189px;
     margin-bottom: 100px;
   }
   &__box {
@@ -116,7 +114,6 @@
   }
   .section-title {
     margin-bottom: 101px;
-    padding-top: 200px;
   }
   &__list {
     display: flex;
@@ -126,6 +123,7 @@
   }
   &-item {
     max-width: 350px;
+    width: 100%;
   }
   &__subtitle {
     @extend %roboto-400;
@@ -137,6 +135,7 @@
     position: relative;
     margin-bottom: 10px;
     max-width: 220px;
+    width: 100%;
     min-height: 56px;
     display: flex;
     align-items: center;
@@ -162,6 +161,7 @@
   }
   &__text {
     max-width: 350px;
+    width: 100%;
   }
   &__box {
     display: flex;
@@ -170,9 +170,97 @@
   }
   &__feature-text {
     max-width: 600px;
+    width: 100%;
     &:not(:last-child) {
       margin-bottom: 30px;
     }
+  }
+}
+
+.development {
+  display: flex;
+  gap: 41px;
+  justify-content: space-between;
+  @extend %roboto-300;
+  line-height: 1.29;
+  color: $text-color;
+  .container {
+    margin: 0 0 0 auto;
+  }
+  &__box {
+    max-width: 560px;
+    width: 100%;
+  }
+  .section-title {
+    margin-bottom: 100px;
+  }
+  &__item {
+    max-width: 507px;
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  &__img {
+    @extend %img-styles;
+    width: 960px;
+    height: 850px;
+  }
+}
+
+.gallery {
+  .section-title {
+    margin-bottom: 212px;
+  }
+  &__box {
+    margin-bottom: 50px;
+  }
+  &__btns {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-transform: uppercase;
+    @extend %roboto-400;
+    font-size: 24px;
+    line-height: 0.75;
+    letter-spacing: 0.03em;
+  }
+  .mixitup-control-active {
+    color: $accent-color;
+  }
+  &__img-list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 40px;
+  }
+  &__img-item {
+    &:nth-child(1) {
+      grid-column: span 2;
+    }
+    &:nth-child(2) {
+      max-width: 290px;
+      width: 100%;
+    }
+    &:nth-child(3) {
+      max-width: 250px;
+      width: 100%;
+    }
+    &:nth-child(4) {
+      max-width: 250px;
+      width: 100%;
+    }
+    &:nth-child(5) {
+      max-width: 290px;
+      width: 100%;
+    }
+    &:nth-child(6) {
+      grid-column: span 2;
+    }
+  }
+  &__img {
+    min-height: 280px;
   }
 }
 
