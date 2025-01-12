@@ -94,7 +94,6 @@
   }
   &__box {
     @extend %roboto-300;
-    text-align: left;
     display: grid;
     justify-content: space-between;
     gap: 10px;
@@ -104,6 +103,76 @@
     margin-bottom: 200px;
     line-height: 1.29;
     letter-spacing: 0.04em;
+  }
+}
+
+.benefits {
+  background-color: $bg-color;
+  @extend %roboto-300;
+  line-height: 1.29;
+  color: $text-color;
+  .container {
+    margin: 0 auto;
+  }
+  .section-title {
+    margin-bottom: 101px;
+    padding-top: 200px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 75px;
+    margin-bottom: 102px;
+  }
+  &-item {
+    max-width: 350px;
+  }
+  &__subtitle {
+    @extend %roboto-400;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    padding-left: 60px;
+    position: relative;
+    margin-bottom: 10px;
+    max-width: 220px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      left: 0;
+      top: 0;
+      @extend %img-styles;
+    }
+    &--living::before {
+      background-image: url(../images/icons/living.svg);
+    }
+    &--flying::before {
+      background-image: url(../images/icons/flying.svg);
+    }
+    &--studying::before {
+      background-image: url(../images/icons/studying.svg);
+    }
+  }
+  &__text {
+    max-width: 350px;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 200px;
+  }
+  &__feature-text {
+    max-width: 600px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
 
