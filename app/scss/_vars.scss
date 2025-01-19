@@ -61,3 +61,10 @@ $border-color: #dadada;
   align-items: center;
   justify-content: center;
 }
+
+$breakpoints: (
+  "desktop": 1230px,
+  "tablet-2": 992px,
+  "tablet": 768px,
+  "phone": 560px,
+);

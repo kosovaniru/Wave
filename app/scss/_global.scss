@@ -31,10 +31,20 @@
     background-image: url(../images/sections/section-title__line.png);
     position: absolute;
     @extend %img-styles;
-    right: 0;
+    right: 16px;
+    background-size: contain;
     bottom: -30px;
-    width: 48px;
-    height: 85px;
+    width: 33px;
+    height: 80px;
+  }
+  @include mq("desktop") {
+    font-size: 40px;
+  }
+  @include mq("tablet-2") {
+    font-size: 30px;
+  }
+  @include mq("tablet") {
+    font-size: 25px;
   }
 }
 
