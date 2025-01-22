@@ -64,8 +64,8 @@
       gap: 40px;
     }
     @include mq("tablet-2") {
-      display: none;
-      transform: translateY(-200px);
+      position: absolute;
+      transform: translateY(-200%);
     }
   }
   .list-active {
@@ -73,8 +73,15 @@
     flex-direction: column;
     position: absolute;
     width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 40px;
+    background-color: $accent-color;
     align-items: center;
     height: 100vh;
+    transition: transform 0.4s;
     transform: translateY(0);
   }
   &__item {
@@ -186,6 +193,7 @@
 }
 
 .logo {
+  z-index: 10;
   &__img {
     @extend %img-styles;
     width: 60px;
